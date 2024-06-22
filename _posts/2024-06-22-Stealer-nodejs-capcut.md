@@ -63,6 +63,7 @@ Các thông tin bị đánh cắp được kẻ tấn công gửi thông qua bot
 
 ## IOCs
 
+>Domains
 >https://avatarcloud[.]top
 >https://cloudimages[.]net
 >https://editorimage[.]info
@@ -80,10 +81,9 @@ Các thông tin bị đánh cắp được kẻ tấn công gửi thông qua bot
 >https://toimageai[.]top
 {: .prompt-info }
 
->[!Note]- Hash
->```Copy
->d6aee63ffe429ddb9340090bff2127efad340240954364f1c996a8da6b711374
->```
+>Hash
+>`d6aee63ffe429ddb9340090bff2127efad340240954364f1c996a8da6b711374`
+{: .prompt-info }
 
 ### Những thông tin hacker đánh cắp
 
@@ -94,79 +94,71 @@ Các thông tin bị đánh cắp được kẻ tấn công gửi thông qua bot
 {"name":"Edge","productName":"Microsoft Edge","pa":"\\AppData\\Local\\Microsoft\\Edge\\User Data","local":"\\AppData\\Local\\Microsoft\\Edge\\User Data\\Local State","cookie":"\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cookies","login":"\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Login Data"}
 {"name":"Brave","productName":"Brave Browser","pa":"\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data","local":"\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\Local State","cookie":"\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\Default\\Cookies","login":"\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\Default\\Login Data"}
 ```
-```json
-{
-  "ten": "String",
-  "uid": "String",
-  "fa": "String",
-  "cookie": "String",
-  "password": "String",
-  "token": "String",
-  "ngayLay": "DateTime",
-  "cookieGg": "String",
-  "email": "String",
-  "fanpage": [
-    {}
-  ],
-  "businesses": [
-    {}
-  ],
-  "taiKhoanAds": [
-    {}
-  ],
-  "birthday": "String",
-  "location": "String",
-  "step": "String",
-  "cookieOutlook": "String",
-  "usergmail": "String",
-  "passgmail": "String",
-  "useroutlook": "String",
-  "passoutlook": "String",
-  "ip": "String",
-  "nguongHienTaiCaoNhat": "String",
-  "hanhDong": "String",
-  "trinhDuyet": "String",
-  "ngayReset": "DateTime",
-  "getnew": "String",
-  "_id": "String",
-  "createdAt": "DateTime",
-  "updatedAt": "DateTime",
-  "maquocgia": "String",
-  "trangthaionline": true,
-  "maMay": "String"
-}
-
-```
-```json
-{
-  "trangThai": "String",
-  "ngayTao": "String",
-  "ngayLapHoaDon": "String",
-  "adminAn": 0,
-  "loaiTaiKhoan": "String",
-  "muiGio": "String",
-  "theThanhToan": "String",
-  "currency": "String",
-  "id": "String",
-  "gioiHanChiTieu": "String",
-  "nguongHienTai": "String",
-  "tongChiTieu": "String",
-  "soDu": "String",
-  "ten": "String",
-  "ngayHetHan": "String",
-  "trangThaiThe": "String",
-  "radioToUsd": 0.0
+```graphql
+type DuLieu {
+  ten: String
+  uid: String
+  fa: String
+  cookie: String
+  password: String
+  token: String
+  ngayLay: DateTime
+  cookieGg: String
+  email: String
+  fanpage: [Fanpage]
+  businesses: [Businesses]
+  taiKhoanAds: [TaiKhoanAds]
+  birthday: String
+  location: String
+  step: String
+  cookieOutlook: String
+  usergmail: String
+  passgmail: String
+  useroutlook: String
+  passoutlook: String
+  ip: String
+  nguongHienTaiCaoNhat: String
+  hanhDong: String
+  trinhDuyet: String
+  ngayReset: DateTime
+  getnew: String
+  _id: String
+  createdAt: DateTime
+  updatedAt: DateTime
+  maquocgia: String
+  trangthaionline: Boolean
+  maMay: String
 }
 ```
-```json
-{
-  "accessToken": "String",
-  "id": "String",
-  "name": "String",
-  "verification_status": "String",
-  "fan_count": "String"
+```graphql
+type TaiKhoanAds {
+  trangThai: String
+  ngayTao: String
+  ngayLapHoaDon: String
+  adminAn: Int
+  loaiTaiKhoan: String
+  muiGio: String
+  theThanhToan: String
+  currency: String
+  id: String
+  gioiHanChiTieu: String
+  nguongHienTai: String
+  tongChiTieu: String
+  soDu: String
+  ten: String
+  ngayHetHan: String
+  trangThaiThe: String
+  radioToUsd: Float
 }
-
+```
+```graphql
+type Fanpage {
+  accessToken: String
+  id: String
+  name: String
+  verification_status: String
+  fan_count: String
+}
 ```
 ```graphql
 type Businesses {
@@ -183,4 +175,5 @@ type Businesses {
 
 ### Threat Intelligence
 https://x.com/josh_penny/status/1679092742666825731
+
 [Undefined #stealer disguised as @capcutapp installer distributed via @trello 🏴‍☠️ No VT detection](https://x.com/ULTRAFRAUD/status/1678849977336954880)
