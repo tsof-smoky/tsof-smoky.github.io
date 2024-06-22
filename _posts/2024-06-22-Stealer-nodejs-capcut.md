@@ -63,8 +63,6 @@ Các thông tin bị đánh cắp được kẻ tấn công gửi thông qua bot
 
 ## IOCs
 
->[!Note]- Domains
->```Copy
 >https://avatarcloud[.]top
 >https://cloudimages[.]net
 >https://editorimage[.]info
@@ -80,7 +78,7 @@ Các thông tin bị đánh cắp được kẻ tấn công gửi thông qua bot
 >https://heyimage[.]info
 >https://nametoimage[.]com
 >https://toimageai[.]top
->```
+{: .prompt-info }
 
 >[!Note]- Hash
 >```Copy
@@ -97,72 +95,80 @@ Các thông tin bị đánh cắp được kẻ tấn công gửi thông qua bot
 {"name":"Brave","productName":"Brave Browser","pa":"\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data","local":"\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\Local State","cookie":"\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\Default\\Cookies","login":"\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\Default\\Login Data"}
 ```
 ```json
-type DuLieu {
-  ten: String
-  uid: String
-  fa: String
-  cookie: String
-  password: String
-  token: String
-  ngayLay: DateTime
-  cookieGg: String
-  email: String
-  fanpage: [Fanpage]
-  businesses: [Businesses]
-  taiKhoanAds: [TaiKhoanAds]
-  birthday: String
-  location: String
-  step: String
-  cookieOutlook: String
-  usergmail: String
-  passgmail: String
-  useroutlook: String
-  passoutlook: String
-  ip: String
-  nguongHienTaiCaoNhat: String
-  hanhDong: String
-  trinhDuyet: String
-  ngayReset: DateTime
-  getnew: String
-  _id: String
-  createdAt: DateTime
-  updatedAt: DateTime
-  maquocgia: String
-  trangthaionline: Boolean
-  maMay: String
+{
+  "ten": "String",
+  "uid": "String",
+  "fa": "String",
+  "cookie": "String",
+  "password": "String",
+  "token": "String",
+  "ngayLay": "DateTime",
+  "cookieGg": "String",
+  "email": "String",
+  "fanpage": [
+    {}
+  ],
+  "businesses": [
+    {}
+  ],
+  "taiKhoanAds": [
+    {}
+  ],
+  "birthday": "String",
+  "location": "String",
+  "step": "String",
+  "cookieOutlook": "String",
+  "usergmail": "String",
+  "passgmail": "String",
+  "useroutlook": "String",
+  "passoutlook": "String",
+  "ip": "String",
+  "nguongHienTaiCaoNhat": "String",
+  "hanhDong": "String",
+  "trinhDuyet": "String",
+  "ngayReset": "DateTime",
+  "getnew": "String",
+  "_id": "String",
+  "createdAt": "DateTime",
+  "updatedAt": "DateTime",
+  "maquocgia": "String",
+  "trangthaionline": true,
+  "maMay": "String"
+}
+
+```
+```json
+{
+  "trangThai": "String",
+  "ngayTao": "String",
+  "ngayLapHoaDon": "String",
+  "adminAn": 0,
+  "loaiTaiKhoan": "String",
+  "muiGio": "String",
+  "theThanhToan": "String",
+  "currency": "String",
+  "id": "String",
+  "gioiHanChiTieu": "String",
+  "nguongHienTai": "String",
+  "tongChiTieu": "String",
+  "soDu": "String",
+  "ten": "String",
+  "ngayHetHan": "String",
+  "trangThaiThe": "String",
+  "radioToUsd": 0.0
 }
 ```
 ```json
-type TaiKhoanAds {
-  trangThai: String
-  ngayTao: String
-  ngayLapHoaDon: String
-  adminAn: Int
-  loaiTaiKhoan: String
-  muiGio: String
-  theThanhToan: String
-  currency: String
-  id: String
-  gioiHanChiTieu: String
-  nguongHienTai: String
-  tongChiTieu: String
-  soDu: String
-  ten: String
-  ngayHetHan: String
-  trangThaiThe: String
-  radioToUsd: Float
+{
+  "accessToken": "String",
+  "id": "String",
+  "name": "String",
+  "verification_status": "String",
+  "fan_count": "String"
 }
+
 ```
-```json
-type Fanpage {
-  accessToken: String
-  id: String
-  name: String
-  verification_status: String
-  fan_count: String
-}
-```
-```json
+```graphql
 type Businesses {
   ten: String
   gioiHan: Int
